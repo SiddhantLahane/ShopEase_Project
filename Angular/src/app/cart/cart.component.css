@@ -1,0 +1,38 @@
+/* cart.component.css */
+.cart-container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .cart-summary {
+    margin-top: 30px;
+  }
+  
+  .cart-summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-summary li {
+    margin-bottom: 10px;
+  }
+  
+  .total-amount {
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: right;
+  }
+  

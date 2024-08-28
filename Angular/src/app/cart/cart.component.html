@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<!-- cart.component.html -->
+<div class="cart-container">
+    <h2>Shopping Cart</h2>
+  
+    <form [formGroup]="cartForm" (ngSubmit)="addToCart()">
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" formControlName="productName" class="form-control" placeholder="Enter product name">
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" formControlName="price" class="form-control" placeholder="Enter price">
+      </div>
+  
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" formControlName="quantity" class="form-control">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add to Cart</button>
+    </form>
+  
+    <div class="cart-summary">
+      <h3>Cart Summary</h3>
+      <ul>
+        <li *ngFor="let item of cartItems">
+          {{ item.quantity }} x {{ item.productName }} - ${{ item.price * item.quantity }}
+        </li>
+      </ul>
+      <div class="total-amount">
+        <strong>Total Amount: ${{ totalAmount }}</strong>
+      </div>
+    </div>
+  
+    <button class="btn btn-success" (click)="pay()">Pay</button>
+  </div>
+  

@@ -1,0 +1,38 @@
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <h1>Edit Shipper</h1>
+        <p>Update the shipper's details below.</p>
+    </div>
+
+    <!-- Back to List Button -->
+    <a href="/shipper" class="btn btn-back mb-4">
+        <i class="fa fa-arrow-left"></i> Back to Shipper List
+    </a>
+
+    <!-- Edit Form -->
+    <div class="mb-4 p-4 bg-white rounded shadow-sm">
+        <h4>Edit Shipper Details</h4>
+        <form [formGroup]="editForm" (ngSubmit)="onUpdate()">
+            <div class="form-group">
+                <label for="editName">id</label>
+                <input type="text" class="form-control" id="editName" formControlName="id" required>
+            </div>
+            <div class="form-group">
+                <label for="editName">Name</label>
+                <input type="text" class="form-control" id="editName" formControlName="name" required>
+            </div>
+            <div class="form-group">
+                <label for="editContactNumber">Contact</label>
+                <input type="text" class="form-control" id="editContactNumber" formControlName="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Email</label>
+                <input type="email" class="form-control" id="editEmail" formControlName="email" required>
+            </div>
+            <button type="submit" class="btn btn-success">Update Shipper</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+        </form>
+    </div>
+</div>
+

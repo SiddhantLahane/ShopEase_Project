@@ -1,0 +1,24 @@
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <h1>Shipper Details</h1>
+        <p>View the details of the selected shipper below.</p>
+    </div>
+
+    <!-- Back to List Button -->
+    <a href="/shipper" class="btn btn-back mb-4">
+        <i class="fa fa-arrow-left"></i> Back to Shipper List
+    </a>
+
+    <!-- Shipper Details -->
+    <div class="card">
+        <div class="card-header">
+            <h4>{{ shipper.name }}</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Contact Number:</strong> {{ shipper.contactNumber }}</p>
+            <p><strong>Email:</strong> {{ shipper.email }}</p>
+        </div>
+    </div>
+</div>
+
