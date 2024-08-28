@@ -1,0 +1,82 @@
+<section class="vh-100 bg-light">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5">
+            <h3 class="mb-5 text-center">User Registration</h3>
+
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="name" class="form-control form-control-lg" formControlName="name"/>
+                    <label class="form-label" for="name">Name</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <select class="form-select form-select-lg" id="gender" formControlName="gender">
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label class="form-label" for="gender">Gender</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="mobile" class="form-control form-control-lg" formControlName="mobile"/>
+                    <label class="form-label" for="mobile">Mobile</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="address" class="form-control form-control-lg" formControlName="address"/>
+                    <label class="form-label" for="address">Address</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="city" class="form-control form-control-lg" formControlName="city"/>
+                    <label class="form-label" for="city">City</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="pincode" class="form-control form-control-lg" formControlName="pincode"/>
+                    <label class="form-label" for="pincode">Pincode</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="email" id="email" class="form-control form-control-lg" formControlName="email"/>
+                    <label class="form-label" for="email">Email</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="password" class="form-control form-control-lg" formControlName="password"/>
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary btn-lg ms-2">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

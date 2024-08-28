@@ -1,0 +1,67 @@
+
+
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section text-center">
+            <h1>SubCategory List</h1>
+            <p>Manage your shippers effectively with ease.</p>
+        </div>
+        
+        <!-- Back to Dashboard Button -->
+        <a href="dashboard" class="btn btn-back mb-4">
+            <i class="fa fa-arrow-left"></i> Back to Dashboard
+        </a>
+
+        <!-- Form to add new data -->
+        <div class="mb-4 p-4 bg-white rounded shadow-sm">
+            <h4>Add New Item</h4>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact</label>
+                    <input type="text" class="form-control" id="contactNumber" formControlName="contactNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Item</button>
+            </form>
+        </div>
+
+        <!-- Table to display data -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dataList">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.contactNumber }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>
+                            <!-- Uncomment and add functionality for buttons -->
+                            <!-- <button class="btn btn-info btn-sm" (click)="viewDetails(item.id)">Details</button>
+                            <button class="btn btn-warning btn-sm" (click)="editItem(item.id)">Edit</button>
+                            <button class="btn btn-danger btn-sm" (click)="deleteItem(item.id)">Delete</button> -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+   

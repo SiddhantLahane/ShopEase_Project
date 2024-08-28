@@ -1,0 +1,48 @@
+/* navbar.component.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #137bd6; /* Grey color */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.navbar a, .navbar button {
+    color: rgb(11, 11, 11);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px; /* Curved corners */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar a:hover, .navbar button:hover {
+    background-color: #2981cd; /* Change background color on hover */
+    color: black;
+    padding: 10px 16px; /* Reduced padding on hover */
+}
+
+.navbar button {
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar .search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    width: 70%;
+}
+
+.navbar input[type="text"]:focus {
+    outline: none;
+}
